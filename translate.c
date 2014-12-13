@@ -165,6 +165,7 @@ token_t *Tokenize(char *file, ssize_t length)
 					++m;
 			//	m++;
 				flags.is_block = 1;
+				break;
 			} 
 			if (*m == '\n') {
 				end_instruction = 1;
