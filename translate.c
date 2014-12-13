@@ -123,13 +123,8 @@ void TokensList(token_t *tokens)
 
 	while (c) {
 		if (c->flags.is_block)
-		printf("\t\t");
+		printf("\t");
 		printf("%s %d %d %d %d\n", c->token, c->type, c->flags.end_instruction, c->flags.is_block, c->flags.top_block);
-		token_t *b = c->block;
-		while (b) {
-			printf("\t%s %d %d %d\n", b->token, b->type, b->flags.end_instruction, b->flags.is_block, c->flags.top_block);
-			b = b->next;
-		}
 		c = c->next;
 	}
 }
